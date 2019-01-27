@@ -6,3 +6,5 @@ Rick and Morty favourite episodes
 - create new file called Store.jsx
 
 - get rid of service worker code in index.js as not to confuse
+
+- cleaneup, delete, app.css, app.text, logo.svg, serviceWorker.js to avoid confusion
