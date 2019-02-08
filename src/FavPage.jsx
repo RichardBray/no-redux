@@ -7,15 +7,17 @@ const EpisodesList = React.lazy(() => import('./EpisodesList'));
 export default function FavPage() {
   const { state, dispatch } = React.useContext(Store);
 
+  const props = {
+    episodes: state.favourites,
+    state: { state, dispatch },
+    toggleFav: toggleFavAction,
+    faves: state.favourites
+  };
+
   return (
     <React.Suspense fallback={<div>Loading...</div>}>
       <div className='episode-layout'>
-        <EpisodesList
-          episodes={state.favourites}
-          state={{ state, dispatch }}
-          toggleFav={toggleFavAction}
-          faves={state.favourites}
-        />
+        <EpisodesList {...props} />
       </div>
     </React.Suspense>
   );
