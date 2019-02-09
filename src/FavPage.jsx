@@ -10,8 +10,8 @@ export default function FavPage() {
   const props = {
     episodes: state.favourites,
     state: { state, dispatch },
-    toggleFav: toggleFavAction,
-    faves: state.favourites
+    toggleFavAction,
+    favourites: state.favourites
   };
 
   return (

@@ -11,15 +11,15 @@ export const fetchDataAction = async dispatch => {
 };
 
 export const toggleFavAction = (episode, state, dispatch) => {
-  const pick = state.favourites.includes(episode);
-  let disp = {
+  const episodeInFavourites = state.favourites.includes(episode);
+  let dispatchObj = {
     type: 'ADD_FAV',
     payload: episode
   };
-  if (pick)
-    disp = {
+  if (episodeInFavourites)
+    dispatchObj = {
       type: 'REMOVE_FAV',
       payload: state.favourites.filter(fav => fav.id !== episode.id)
     };
-  return dispatch(disp);
+  return dispatch(dispatchObj);
 };

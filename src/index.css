@@ -20,12 +20,12 @@ body {
 }
 
 .header {
-  align-items: center;  
+  align-items: center;
   background: white;
   border-bottom: 1px solid black;
   display: flex;
   justify-content: space-between;
-  padding: .5rem;
+  padding: 0.5rem;
   position: sticky;
   top: 0;
 }

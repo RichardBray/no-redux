@@ -14,10 +14,10 @@ export default function HomePage() {
   const props = {
     episodes: state.episodes,
     state: { state, dispatch },
-    toggleFav: toggleFavAction,
-    faves: state.favourites
+    toggleFavAction,
+    favourites: state.favourites
   };
-  
+
   return (
     <React.Fragment>
       <React.Suspense fallback={<div>Loading...</div>}>
