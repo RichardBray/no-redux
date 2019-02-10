@@ -1,9 +1,6 @@
 # Replacing Redux with hooks and context
 This is the final code for a tutorial I wrote [here on Medium](https://medium.com/@richbray/replacing-redux-with-react-hooks-and-context-part-1-11b72ffdb533).
 
-This is what the final application looks like:
-![Rick and Morty episode favourites](https://cdn-images-1.medium.com/max/1600/1*FlIuQfJVShkmnT4_ysQmyw.gif)
-
 
 ## Install
 To install this locally make sure you have NodeJS on your machine.
@@ -16,6 +13,7 @@ And run the applicaiton with:
 ```
 $ npm start
 ```
+
 
 ## Show some love?
 
