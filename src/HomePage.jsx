@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { lazy, useContext, useEffect, Suspense } from 'react';
 import { Store } from './Store';
 import { fetchDataAction, toggleFavAction } from './Actions';
 
-const EpisodesList = React.lazy(() => import('./EpisodesList'));
+const EpisodesList = lazy(() => import('./EpisodesList'));
 
 export default function HomePage() {
-  const { state, dispatch } = React.useContext(Store);
+  const { state, dispatch } = useContext(Store);
 
-  React.useEffect(() => {
+  useEffect(() => {
     state.episodes.length === 0 && fetchDataAction(dispatch);
-  }, [state]);
+  }, [state, dispatch]);
 
   const props = {
     episodes: state.episodes,
@@ -19,12 +19,12 @@ export default function HomePage() {
   };
 
   return (
-    <React.Fragment>
-      <React.Suspense fallback={<div>Loading...</div>}>
+    <>
+      <Suspense fallback={<div>Loading...</div>}>
         <div className='episode-layout'>
           <EpisodesList {...props} />
         </div>
-      </React.Suspense>
-    </React.Fragment>
+      </Suspense>
+    </>
   );
 }
