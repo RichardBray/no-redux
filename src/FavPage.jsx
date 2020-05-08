@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Suspense, lazy, useContext } from 'react';
 import { Store } from './Store';
 import { toggleFavAction } from './Actions';
 
-const EpisodesList = React.lazy(() => import('./EpisodesList'));
+const EpisodesList = lazy(() => import('./EpisodesList'));
 
 export default function FavPage() {
-  const { state, dispatch } = React.useContext(Store);
+  const { state, dispatch } = useContext(Store);
 
   const props = {
     episodes: state.favourites,
@@ -15,10 +15,10 @@ export default function FavPage() {
   };
 
   return (
-    <React.Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div>Loading...</div>}>
       <div className='episode-layout'>
         <EpisodesList {...props} />
       </div>
-    </React.Suspense>
+    </Suspense>
   );
 }
