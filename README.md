@@ -18,6 +18,5 @@ $ npm start
 ## Show some love?
 
 If you've found this project useful and would like to support me there are several ways you could do so.
-- Support me on [Patreon](https://www.patreon.com/richardobray)
 - Subscribe to my videos on [Youtube](https://www.youtube.com/channel/UC6matv_t6jTc17oJdPkjUVQ)
 - Follow me on [Twitter](https://twitter.com/Ceiga?lang=en-gb)
